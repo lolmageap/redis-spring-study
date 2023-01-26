@@ -32,5 +32,4 @@ public class HelloController {
         return ops.get("fruit");
     }
 
-
 }
