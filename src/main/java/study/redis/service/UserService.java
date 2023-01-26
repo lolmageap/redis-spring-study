@@ -23,14 +23,14 @@ public class UserService {
         String userName = null;
 
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
-        String cachedName = ops.get("nameKey : " + userId);
+        String cachedName = ops.get("nameKey: " + userId);
 
         if (cachedName != null){
             userName = cachedName;
         }
         else {
             userName = externerApiService.getUserName(userId);
-            ops.set("nameKey: " + userId, userName, 5L, TimeUnit.SECONDS);
+            ops.set("nameKey: " + userId, userName, 5, TimeUnit.SECONDS);
         }
 
         int userAge = externerApiService.getUserAge(userId);

@@ -11,7 +11,7 @@ public class ExternerApiService {
         try {Thread.sleep(500);}
         catch (InterruptedException e){}
 
-        System.out.println("호출호출호출호출호출호출호출호출호출호출호출호출");
+        System.out.println("이름 출력");
         if (userId.equals("A")){
             return "Adam";
         }if (userId.equals("B")){
@@ -25,7 +25,7 @@ public class ExternerApiService {
         try {Thread.sleep(500);}
         catch (InterruptedException e){}
 
-        System.out.println("호출호출호출호출호출호출호출호출호출호출호출호출");
+        System.out.println("나이 출력");
 
         if (userId.equals("A")){
             return 28;
